@@ -13,3 +13,43 @@ This is an import script for loading data about catalogs of rare disease registr
 # Run the loader
 
 `python importer.py erdri rd-sample`
+
+# Run a cool query
+
+Go to http://localhost:8890/sparql and find the pateint registry name, disease code and registry country.
+
+
+```
+PREFIX foaf: <http://xmlns.com/foaf/0.1/>
+PREFIX fo: <http://www.w3.org/1999/XSL/Format#>
+PREFIX dc: <http://purl.org/dc/elements/1.1/>
+PREFIX iao: <http://purl.obolibrary.org/obo/iao.owl#>
+PREFIX schema: <http://schema.org/>
+PREFIX sc: <http://purl.org/science/owl/sciencecommons/>
+PREFIX sio: <http://semanticscience.org/resource/>
+PREFIX ncit: <http://purl.obolibrary.org/obo/>
+PREFIX dcat: <http://www.w3.org/ns/dcat#>
+PREFIX dct: <http://purl.org/dc/terms/1.1/>
+PREFIX ldp: <http://www.w3.org/ns/ldp#>
+PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
+PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
+PREFIX ejp: <http://purl.org/ejp-rd/vocabulary/>
+
+SELECT ?catalog_title ?reg_title ?disease ?country WHERE {
+
+  <http://localhost:8890/DAV/home/LDP/> ldp:contains ?catalog_container .
+
+  GRAPH ?catalog_container {
+    ?catalog a ejp:CatalogOfRegistries .
+    ?catalog dct:title ?catalog_title .
+    ?catalog dct:dataset ?registry .
+    ?catalog_container ldp:contains ?registry_container
+  }
+  GRAPH ?registry_container {
+    ?registry a ejp:PatientRegistryDataset .
+    ?registry dct:title ?reg_title .
+    ?registry dcat:theme ?disease .
+    ?registry dct:publisher [ dct:spatial [ ejp:country ?country] ]
+  }
+}
+```
