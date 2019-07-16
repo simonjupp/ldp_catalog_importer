@@ -1,0 +1,18 @@
+{
+  "theme" : [
+    {
+      "@id" : "http:\/\/www.orpha.net\/ORDO\/Orphanet_2828"
+    }
+  ],
+  "publisher" : {
+    "name" : "IRCCS FOUNDATION NEUROLOGICAL INSTITUTE CARLO BESTA",
+    "location" : {
+      "country" : "Italy",
+      "city" : "MILAN"
+    }
+  },
+  "numberOfPatients" : 1994,
+  "name" : "Cell line and DNA Bank of Genetic Movement Dis and Mitochondrial Dis - Besta Institute Milano, Italy",
+  "@type" : "BiobankDataset",
+  "@id" : "http:\/\/localhost:8080\/dataset\/?disease=urn:miriam:orphanet:2828&biobank=45274"
+}

@@ -1,0 +1,18 @@
+{
+  "theme" : [
+    {
+      "@id" : "http:\/\/www.orpha.net\/ORDO\/Orphanet_68356"
+    }
+  ],
+  "publisher" : {
+    "name" : "Avda. Monforte de Lemos, 5",
+    "location" : {
+      "country" : "Spain",
+      "city" : "Madrid"
+    }
+  },
+  "numberOfPatients" : 1,
+  "name" : "Biobank of the Institute of Rare Diseases Research\/Institute of Health Carlos III (IIER-ISCIII)",
+  "@type" : "BiobankDataset",
+  "@id" : "http:\/\/localhost:8080\/dataset\/?disease=urn:miriam:orphanet:68356&biobank=44001"
+}

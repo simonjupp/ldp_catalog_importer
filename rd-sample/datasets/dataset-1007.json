@@ -1,0 +1,18 @@
+{
+  "theme" : [
+    {
+      "@id" : "http:\/\/purl.obolibrary.org\/obo\/NCIT_C49651"
+    }
+  ],
+  "publisher" : {
+    "name" : "Medical Genetics, University of Siena",
+    "location" : {
+      "country" : "Italy",
+      "city" : "Siena"
+    }
+  },
+  "numberOfPatients" : 86,
+  "name" : "Cells lines and DNA bank of Rett syndrome and other X-linked mental retardation",
+  "@type" : "BiobankDataset",
+  "@id" : "http:\/\/localhost:8080\/dataset\/?disease=urn:miriam:ncit:C49651&biobank=77630"
+}

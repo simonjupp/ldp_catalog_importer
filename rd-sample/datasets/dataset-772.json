@@ -1,0 +1,18 @@
+{
+  "theme" : [
+    {
+      "@id" : "http:\/\/purl.obolibrary.org\/obo\/NCIT_C50913"
+    }
+  ],
+  "publisher" : {
+    "name" : "Laboratory of Human Genetics  - E.O. Ospedali Galliera",
+    "location" : {
+      "country" : "Italy",
+      "city" : "Genova"
+    }
+  },
+  "numberOfPatients" : 61,
+  "name" : "Galliera Genetic Bank",
+  "@type" : "BiobankDataset",
+  "@id" : "http:\/\/localhost:8080\/dataset\/?disease=urn:miriam:ncit:C50913&biobank=77350"
+}

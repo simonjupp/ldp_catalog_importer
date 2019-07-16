@@ -1,0 +1,18 @@
+{
+  "theme" : [
+    {
+      "@id" : "http:\/\/www.orpha.net\/ORDO\/Orphanet_598"
+    }
+  ],
+  "publisher" : {
+    "name" : "Fondazione IRCCS Ca' Granda Ospedale Maggiore Policlinico Milan University",
+    "location" : {
+      "country" : "Italy",
+      "city" : "Milan"
+    }
+  },
+  "numberOfPatients" : 31,
+  "name" : "Biobank of skeletal muscle, peripheral nerve, DNA and cell cultures",
+  "@type" : "BiobankDataset",
+  "@id" : "http:\/\/localhost:8080\/dataset\/?disease=urn:miriam:orphanet:598&biobank=77219"
+}

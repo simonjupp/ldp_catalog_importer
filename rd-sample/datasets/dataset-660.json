@@ -1,0 +1,18 @@
+{
+  "theme" : [
+    {
+      "@id" : "http:\/\/www.orpha.net\/ORDO\/Orphanet_275543"
+    }
+  ],
+  "publisher" : {
+    "name" : "CIBER, ISCIII - Ministry of Economy, Industry and Competitiveness",
+    "location" : {
+      "country" : "Spain",
+      "city" : "Madrid"
+    }
+  },
+  "numberOfPatients" : 1,
+  "name" : "CIBERER Biobank",
+  "@type" : "BiobankDataset",
+  "@id" : "http:\/\/localhost:8080\/dataset\/?disease=urn:miriam:orphanet:275543&biobank=76823"
+}

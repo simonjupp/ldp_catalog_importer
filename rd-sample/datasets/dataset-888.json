@@ -1,0 +1,18 @@
+{
+  "theme" : [
+    {
+      "@id" : "http:\/\/www.orpha.net\/ORDO\/Orphanet_870"
+    }
+  ],
+  "publisher" : {
+    "name" : "Laboratory of Human Genetics  - E.O. Ospedali Galliera",
+    "location" : {
+      "country" : "Italy",
+      "city" : "Genova"
+    }
+  },
+  "numberOfPatients" : 240,
+  "name" : "Galliera Genetic Bank",
+  "@type" : "BiobankDataset",
+  "@id" : "http:\/\/localhost:8080\/dataset\/?disease=urn:miriam:orphanet:870&biobank=77350"
+}

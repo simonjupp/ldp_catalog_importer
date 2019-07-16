@@ -1,0 +1,18 @@
+{
+  "theme" : [
+    {
+      "@id" : "http:\/\/purl.obolibrary.org\/obo\/NCIT_C49651"
+    }
+  ],
+  "publisher" : {
+    "name" : "Avda. Monforte de Lemos, 5",
+    "location" : {
+      "country" : "Spain",
+      "city" : "Madrid"
+    }
+  },
+  "numberOfPatients" : 529,
+  "name" : "Biobank of the Institute of Rare Diseases Research\/Institute of Health Carlos III (IIER-ISCIII)",
+  "@type" : "BiobankDataset",
+  "@id" : "http:\/\/localhost:8080\/dataset\/?disease=urn:miriam:ncit:C49651&biobank=44001"
+}

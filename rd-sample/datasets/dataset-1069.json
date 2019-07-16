@@ -1,0 +1,18 @@
+{
+  "theme" : [
+    {
+      "@id" : "http:\/\/www.orpha.net\/ORDO\/Orphanet_101082"
+    }
+  ],
+  "publisher" : {
+    "name" : "The John Walton Muscular Dystrophy Research Centre",
+    "location" : {
+      "country" : "United Kingdom",
+      "city" : "Newcastle upon Tyne"
+    }
+  },
+  "numberOfPatients" : 1,
+  "name" : "Newcastle MRC Biobank for Rare and Neuromuscular Diseases",
+  "@type" : "BiobankDataset",
+  "@id" : "http:\/\/localhost:8080\/dataset\/?disease=urn:miriam:orphanet:101082&biobank=87919"
+}

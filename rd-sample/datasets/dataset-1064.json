@@ -1,0 +1,18 @@
+{
+  "theme" : [
+    {
+      "@id" : "http:\/\/www.orpha.net\/ORDO\/Orphanet_91387"
+    }
+  ],
+  "publisher" : {
+    "name" : "Medical Genetics, University of Siena",
+    "location" : {
+      "country" : "Italy",
+      "city" : "Siena"
+    }
+  },
+  "numberOfPatients" : 14,
+  "name" : "Cells lines and DNA bank of Rett syndrome and other X-linked mental retardation",
+  "@type" : "BiobankDataset",
+  "@id" : "http:\/\/localhost:8080\/dataset\/?disease=urn:miriam:orphanet:91387&biobank=77630"
+}

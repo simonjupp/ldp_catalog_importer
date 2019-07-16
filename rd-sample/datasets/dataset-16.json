@@ -1,0 +1,18 @@
+{
+  "theme" : [
+    {
+      "@id" : "http:\/\/www.orpha.net\/ORDO\/Orphanet_98896"
+    }
+  ],
+  "publisher" : {
+    "name" : "MRC Centre for Neuromuscular Diseases BioBank London\nDubowitz",
+    "location" : {
+      "country" : "",
+      "city" : "-"
+    }
+  },
+  "numberOfPatients" : 192,
+  "name" : "MRC Centre for Neuromuscular Diseases BioBank London",
+  "@type" : "BiobankDataset",
+  "@id" : "http:\/\/localhost:8080\/dataset\/?disease=urn:miriam:orphanet:98896&biobank=168144"
+}

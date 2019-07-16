@@ -1,0 +1,18 @@
+{
+  "theme" : [
+    {
+      "@id" : "http:\/\/purl.obolibrary.org\/obo\/NCIT_C50913"
+    }
+  ],
+  "publisher" : {
+    "name" : "Istituto Giannina Gaslini",
+    "location" : {
+      "country" : "Italy",
+      "city" : "Genova"
+    }
+  },
+  "numberOfPatients" : 425,
+  "name" : "Cell line and DNA Biobank from patients affected by Genetic Diseases",
+  "@type" : "BiobankDataset",
+  "@id" : "http:\/\/localhost:8080\/dataset\/?disease=urn:miriam:ncit:C50913&biobank=62316"
+}

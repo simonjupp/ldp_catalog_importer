@@ -1,0 +1,18 @@
+{
+  "theme" : [
+    {
+      "@id" : "http:\/\/www.orpha.net\/ORDO\/Orphanet_3275"
+    }
+  ],
+  "publisher" : {
+    "name" : "Medical Genetic Department, Rizzoli Orthopaedic Institute",
+    "location" : {
+      "country" : "Italy",
+      "city" : "Bologna"
+    }
+  },
+  "numberOfPatients" : 3,
+  "name" : "BIOGEN - Genetic Biobank",
+  "@type" : "BiobankDataset",
+  "@id" : "http:\/\/localhost:8080\/dataset\/?disease=urn:miriam:orphanet:3275&biobank=173631"
+}

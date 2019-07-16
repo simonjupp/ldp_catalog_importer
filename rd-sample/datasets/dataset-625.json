@@ -1,0 +1,18 @@
+{
+  "theme" : [
+    {
+      "@id" : "http:\/\/www.orpha.net\/ORDO\/Orphanet_94068"
+    }
+  ],
+  "publisher" : {
+    "name" : "Istituto Giannina Gaslini",
+    "location" : {
+      "country" : "Italy",
+      "city" : "Genova"
+    }
+  },
+  "numberOfPatients" : 3,
+  "name" : "Cell line and DNA Biobank from patients affected by Genetic Diseases",
+  "@type" : "BiobankDataset",
+  "@id" : "http:\/\/localhost:8080\/dataset\/?disease=urn:miriam:orphanet:94068&biobank=62316"
+}

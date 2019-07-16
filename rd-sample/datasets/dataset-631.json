@@ -1,0 +1,18 @@
+{
+  "theme" : [
+    {
+      "@id" : "http:\/\/purl.obolibrary.org\/obo\/NCIT_C94342"
+    }
+  ],
+  "publisher" : {
+    "name" : "CIBER, ISCIII - Ministry of Economy, Industry and Competitiveness",
+    "location" : {
+      "country" : "Spain",
+      "city" : "Madrid"
+    }
+  },
+  "numberOfPatients" : 187,
+  "name" : "CIBERER Biobank",
+  "@type" : "BiobankDataset",
+  "@id" : "http:\/\/localhost:8080\/dataset\/?disease=urn:miriam:ncit:C94342&biobank=76823"
+}

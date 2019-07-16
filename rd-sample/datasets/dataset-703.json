@@ -1,0 +1,18 @@
+{
+  "theme" : [
+    {
+      "@id" : "http:\/\/purl.obolibrary.org\/obo\/NCIT_C50913"
+    }
+  ],
+  "publisher" : {
+    "name" : "Fondazione IRCCS Ca' Granda Ospedale Maggiore Policlinico Milan University",
+    "location" : {
+      "country" : "Italy",
+      "city" : "Milan"
+    }
+  },
+  "numberOfPatients" : 234,
+  "name" : "Biobank of skeletal muscle, peripheral nerve, DNA and cell cultures",
+  "@type" : "BiobankDataset",
+  "@id" : "http:\/\/localhost:8080\/dataset\/?disease=urn:miriam:ncit:C50913&biobank=77219"
+}

@@ -1,0 +1,18 @@
+{
+  "theme" : [
+    {
+      "@id" : "http:\/\/www.orpha.net\/ORDO\/Orphanet_98896"
+    }
+  ],
+  "publisher" : {
+    "name" : "Muscle Cell Biology Lab,  Neuromuscular Diseases and Neuroimmunology Unit,",
+    "location" : {
+      "country" : "Italy",
+      "city" : "Milano"
+    }
+  },
+  "numberOfPatients" : 142,
+  "name" : "Bank \"Cells, tissues and DNA from patients with neuromuscular diseases\", Ist. Neurologico C. Besta",
+  "@type" : "BiobankDataset",
+  "@id" : "http:\/\/localhost:8080\/dataset\/?disease=urn:miriam:orphanet:98896&biobank=45401"
+}

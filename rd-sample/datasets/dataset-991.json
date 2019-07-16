@@ -1,0 +1,18 @@
+{
+  "theme" : [
+    {
+      "@id" : "http:\/\/www.orpha.net\/ORDO\/Orphanet_86812"
+    }
+  ],
+  "publisher" : {
+    "name" : "University of Padova-Azienda Ospedaliera",
+    "location" : {
+      "country" : "Italy",
+      "city" : "Padova"
+    }
+  },
+  "numberOfPatients" : 3,
+  "name" : "Neuromuscular Bank of Tissues and DNA samples",
+  "@type" : "BiobankDataset",
+  "@id" : "http:\/\/localhost:8080\/dataset\/?disease=urn:miriam:orphanet:86812&biobank=77489"
+}

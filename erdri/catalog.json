@@ -1,0 +1,20 @@
+{
+  "@id": "https://eu-rd-platform.jrc.ec.europa.eu/erdridor/",
+  "@type": "CatalogOfRegistries",
+  "name": "European Directory of Registries",
+  "themeTaxonomy": [
+    {"@id": "http://www.orphadata.org/data/ORDO/ordo_orphanet.owl"}
+  ],
+  "publisher": [
+    {
+      "name": "European Platform on Rare Disease Registration",
+      "location": {
+        "country": "Germany"
+      }
+    }
+  ],
+  "datasets" : [
+    "https://www.pcdregistry.eu/", "http://www.reseau-htap.fr/"
+  ]
+}
+

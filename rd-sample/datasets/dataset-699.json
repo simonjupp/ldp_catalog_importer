@@ -1,0 +1,18 @@
+{
+  "theme" : [
+    {
+      "@id" : "http:\/\/www.orpha.net\/ORDO\/Orphanet_610"
+    }
+  ],
+  "publisher" : {
+    "name" : "Second University of Naples - Cardiomyology and Medical Genetics",
+    "location" : {
+      "country" : "Italy",
+      "city" : "Naples"
+    }
+  },
+  "numberOfPatients" : 1,
+  "name" : "Bank for the Diagnosis and Research on Neuromuscular Disorders (NHMGB), Cardiomyology and Medical Ge",
+  "@type" : "BiobankDataset",
+  "@id" : "http:\/\/localhost:8080\/dataset\/?disease=urn:miriam:orphanet:610&biobank=76957"
+}

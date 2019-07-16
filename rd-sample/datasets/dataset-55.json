@@ -1,0 +1,18 @@
+{
+  "theme" : [
+    {
+      "@id" : "http:\/\/www.orpha.net\/ORDO\/Orphanet_213726"
+    }
+  ],
+  "publisher" : {
+    "name" : "Medical Genetics, University of Siena",
+    "location" : {
+      "country" : "Italy",
+      "city" : "Siena"
+    }
+  },
+  "numberOfPatients" : 2,
+  "name" : "Cell lines and DNA bank of hereditary cancers",
+  "@type" : "BiobankDataset",
+  "@id" : "http:\/\/localhost:8080\/dataset\/?disease=urn:miriam:orphanet:213726&biobank=261780"
+}
