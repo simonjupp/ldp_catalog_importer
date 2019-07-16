@@ -1,7 +1,6 @@
-@prefix dc: <http://purl.org/dc/terms/> .
+@prefix dc: <http://purl.org/dc/elements/1.1/> .
 @prefix dcat: <http://www.w3.org/ns/dcat#> .
-@prefix dce: <http://purl.org/dc/elements/1.1/> .
-@prefix dct: <http://purl.org/dc/terms/1.1/> .
+@prefix dct: <http://purl.org/dc/terms/> .
 @prefix ejp: <http://purl.org/ejp-rd/vocabulary/> .
 @prefix owl: <http://www.w3.org/2002/07/owl#> .
 @prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
@@ -1158,7 +1157,7 @@
         <http://localhost:8080/dataset/?disease=urn:miriam:orphanet:99938&biobank=87919>,
         <http://localhost:8080/dataset/?disease=urn:miriam:orphanet:99949&biobank=76823>,
         <http://localhost:8080/dataset/?disease=urn:miriam:orphanet:99995&biobank=44001> ;
-    dct:publisher [ dct:spatial [ ejp:country "Groningen",
-                        "The Netherlands" ] ;
+    dct:publisher [ dct:spatial [ ejp:city "Groningen" ;
+                    ejp:country "The Netherlands" ] ;
             dct:title "University Medical Center Groningen" ] .
 
