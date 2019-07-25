@@ -6,6 +6,7 @@
       "city" : "Groningen"
     }
   },
+  "name" : "RD-connect Sample Catalogue",
   "datasets" : [
     "http:\/\/localhost:8080\/dataset\/?disease=urn:miriam:orphanet:119&biobank=168144",
     "http:\/\/localhost:8080\/dataset\/?disease=urn:miriam:orphanet:2020&biobank=168144",

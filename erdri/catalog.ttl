@@ -9,10 +9,10 @@
 @prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
 
 <https://eu-rd-platform.jrc.ec.europa.eu/erdridor/> a ejp:CatalogOfRegistries ;
-    dct:dataset <http://www.reseau-htap.fr/>,
-        <https://www.pcdregistry.eu/> ;
     dct:publisher [ dct:spatial [ ejp:country "Germany" ] ;
             dct:title "European Platform on Rare Disease Registration" ] ;
     dct:title "European Directory of Registries" ;
+    dcat:dataset <http://www.reseau-htap.fr/>,
+        <https://www.pcdregistry.eu/> ;
     dcat:themeTaxonomy <http://www.orphadata.org/data/ORDO/ordo_orphanet.owl> .
 

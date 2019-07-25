@@ -16,7 +16,9 @@ This is an import script for loading data about catalogs of rare disease registr
 
 # Run a cool query
 
-Go to http://localhost:8890/sparql and find the pateint registry name, disease code and registry country.
+Go to http://localhost:8890/sparql to execute the follwowing queries:
+
+1. Find all registries in all catalogs and get the name, disease code and registry country.
 
 
 ```
@@ -29,7 +31,7 @@ PREFIX sc: <http://purl.org/science/owl/sciencecommons/>
 PREFIX sio: <http://semanticscience.org/resource/>
 PREFIX ncit: <http://purl.obolibrary.org/obo/>
 PREFIX dcat: <http://www.w3.org/ns/dcat#>
-PREFIX dct: <http://purl.org/dc/terms/1.1/>
+PREFIX dct: <http://purl.org/dc/terms/>
 PREFIX ldp: <http://www.w3.org/ns/ldp#>
 PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
 PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
@@ -42,11 +44,12 @@ SELECT ?catalog_title ?reg_title ?disease ?country WHERE {
   GRAPH ?catalog_container {
     ?catalog a ejp:CatalogOfRegistries .
     ?catalog dct:title ?catalog_title .
-    ?catalog dct:dataset ?registry .
+    ?catalog dcat:dataset ?registry .
     ?catalog_container ldp:contains ?registry_container
   }
   GRAPH ?registry_container {
-    ?registry a ejp:PatientRegistryDataset .
+    ?registry a ?registry_type .
+    FILTER (?registry_type IN (ejp:BiobankDataset, ejp:PateintRegistryDataset)
     ?registry dct:title ?reg_title .
     ?registry dcat:theme ?disease .
     ?registry dct:publisher [ dct:spatial [ ejp:country ?country] ]

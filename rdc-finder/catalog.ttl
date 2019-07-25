@@ -9,10 +9,6 @@
 @prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
 
 <https://samples.rd-connect.eu/> a ejp:CatalogOfRegistries ;
-    dct:publisher [ dct:spatial [ ejp:city "Groningen" ;
-                    ejp:country "The Netherlands" ] ;
-            dct:title "University Medical Center Groningen" ] ;
-    dct:title "RD-connect Sample Catalogue" ;
     dcat:dataset <http://localhost:8080/dataset/?disease=urn:miriam:ncit:C113725&biobank=44001>,
         <http://localhost:8080/dataset/?disease=urn:miriam:ncit:C113725&biobank=87919>,
         <http://localhost:8080/dataset/?disease=urn:miriam:ncit:C49651&biobank=44001>,
@@ -1160,5 +1156,8 @@
         <http://localhost:8080/dataset/?disease=urn:miriam:orphanet:99937&biobank=77489>,
         <http://localhost:8080/dataset/?disease=urn:miriam:orphanet:99938&biobank=87919>,
         <http://localhost:8080/dataset/?disease=urn:miriam:orphanet:99949&biobank=76823>,
-        <http://localhost:8080/dataset/?disease=urn:miriam:orphanet:99995&biobank=44001> .
+        <http://localhost:8080/dataset/?disease=urn:miriam:orphanet:99995&biobank=44001> ;
+    dct:publisher [ dct:spatial [ ejp:city "Groningen" ;
+                    ejp:country "The Netherlands" ] ;
+            dct:title "University Medical Center Groningen" ] .
 

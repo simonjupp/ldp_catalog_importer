@@ -15,7 +15,7 @@
     "country": "ejp:country",
     "description": "dct:description",
     "datasets": {
-      "@id": "dct:dataset",
+      "@id": "dcat:dataset",
       "@type": "@id"
     },
     "theme": {

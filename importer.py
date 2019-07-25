@@ -36,15 +36,21 @@ def main():
 
     for arg in sys.argv[1:]:
 
-        with open(arg+'/catalog.json', 'r') as f:
-            catalog = json.load(f)
-            catalog["@context"] = context["@context"]
-
-        # convert JSON to ttl and dump
+        print ("processing " + arg)
         graph = ConjunctiveGraph()
-        graph.parse(data=json.dumps(catalog), format='json-ld')
         catalog_file = "{}/{}.ttl".format(arg, 'catalog')
-        graph.serialize(destination=catalog_file, format='ttl')
+
+        try:
+            with open(arg+'/catalog.json', 'r') as f:
+                catalog = json.load(f)
+                catalog["@context"] = context["@context"]
+
+                # convert JSON to ttl and dump
+                graph.parse(data=json.dumps(catalog), format='json-ld')
+                graph.serialize(destination=catalog_file, format='ttl')
+        except:
+            print ("No catalog.json found for {}".format(arg))
+
 
         # create the LDP container and upload ttl
         requests.post(url=LDP_SERVER,
@@ -67,6 +73,7 @@ def main():
 
         files = [f for f in glob.glob(arg + "/datasets/*.json")]
         fc = 1
+        files_to_load =[]
         for f in files:
             with open(f, 'r') as json_file:
                 dataset = json.load(json_file)
@@ -78,25 +85,38 @@ def main():
                 dataset_file_path = "{}/datasets/{}.ttl".format(arg, dataset_file_name)
                 graph.serialize(destination=dataset_file_path, format='ttl')
 
-                # create the LDP container and upload ttl
-                requests.post(url=LDP_SERVER + "/" + arg +'_catalog' + "/",
-                              data=container,
-                              auth=(LDP_USER, LDP_PASS),
-                              headers={
-                                  'Content-Type': 'text/turtle',
-                                  'Accept': 'text/turtle',
-                                  'Slug': dataset_file_name
-                              })
+                file_info = {
+                    'dataset_file_name' : dataset_file_name,
+                    'dataset_file_path' : dataset_file_path
+                }
+                files_to_load.append(file_info)
 
-                data = open(dataset_file_path, 'rb').read()
-                requests.put(url=LDP_SERVER + "/" + arg + '_catalog' + "/" + dataset_file_name + "/",
-                             data=data,
-                             auth=(LDP_USER, LDP_PASS),
-                             headers={
-                                 'Content-Type': 'text/turtle',
-                                 'Accept': 'text/turtle',
-                             })
                 fc+=1
+
+        # create the LDP container for datases and upload ttl
+        files_to_load = [f for f in glob.glob(arg + "/datasets/*.ttl")]
+
+        for ttl_file in files_to_load:
+
+            dataset_file_name = ttl_file.split("/")[-1]
+            requests.post(url=LDP_SERVER + "/" + arg + '_catalog' + "/",
+                          data=container,
+                          auth=(LDP_USER, LDP_PASS),
+                          headers={
+                              'Content-Type': 'text/turtle',
+                              'Accept': 'text/turtle',
+                              'Slug': dataset_file_name
+                          })
+
+
+            data = open(ttl_file, 'rb').read()
+            requests.put(url=LDP_SERVER + "/" + arg + '_catalog' + "/" + dataset_file_name + "/",
+                         data=data,
+                         auth=(LDP_USER, LDP_PASS),
+                         headers={
+                             'Content-Type': 'text/turtle',
+                             'Accept': 'text/turtle',
+                         })
 
 
 
