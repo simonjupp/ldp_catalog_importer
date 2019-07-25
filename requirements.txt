@@ -4,3 +4,4 @@ rdflib
 rdflib-jsonld
 six
 requests
+SPARQLWrapper

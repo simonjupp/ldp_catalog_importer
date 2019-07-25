@@ -22,9 +22,9 @@ register('json-ld', Parser, 'rdflib_jsonld.parser', 'JsonLDParser')
 with open('json-ld-context.json', 'r') as f:
     context = json.load(f)
 
-LDP_SERVER="http://localhost:8890/DAV/home/LDP/"
-LDP_USER='ldp'
-LDP_PASS='ldp'
+LDP_SERVER="http://training.fairdata.solutions/DAV/home/EJP_HACK/Jupp/"
+LDP_USER='ejp'
+LDP_PASS='ejp'
 
 def creater_container():
     pass
@@ -83,7 +83,12 @@ def main():
                 graph.parse(data=json.dumps(dataset), format='json-ld')
                 dataset_file_name = "{}_registry_{}".format(arg, str(fc))
                 dataset_file_path = "{}/datasets/{}.ttl".format(arg, dataset_file_name)
-                graph.serialize(destination=dataset_file_path, format='ttl')
+                try:
+                    graph.serialize(destination=dataset_file_path, format='ttl')
+                except Exception as e:
+                    print ("error converting file to ttl: {}".format(e))
+                    continue
+
 
                 file_info = {
                     'dataset_file_name' : dataset_file_name,

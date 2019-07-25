@@ -37,7 +37,8 @@ PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
 PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
 PREFIX ejp: <http://purl.org/ejp-rd/vocabulary/>
 
-SELECT ?catalog_title ?reg_title ?disease ?country WHERE {
+SELECT DISTINCT ?catalog_title ?reg_title ?disease ?country
+WHERE {
 
   <http://localhost:8890/DAV/home/LDP/> ldp:contains ?catalog_container .
 
@@ -49,7 +50,7 @@ SELECT ?catalog_title ?reg_title ?disease ?country WHERE {
   }
   GRAPH ?registry_container {
     ?registry a ?registry_type .
-    FILTER (?registry_type IN (ejp:BiobankDataset, ejp:PateintRegistryDataset)
+    FILTER (?registry_type IN (ejp:BiobankDataset, ejp:PatientRegistryDataset))
     ?registry dct:title ?reg_title .
     ?registry dcat:theme ?disease .
     ?registry dct:publisher [ dct:spatial [ ejp:country ?country] ]
